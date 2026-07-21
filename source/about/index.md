@@ -1,8 +1,6 @@
 ---
-title: 关于我 - 蓝罗
-date: 2026-07-21 23:20:00
-categories: [关于]
-tags: [简介, 随笔, RPA, 健身]
+title: 关于我
+layout: about
 ---
 
 大家好，我是蓝罗。
