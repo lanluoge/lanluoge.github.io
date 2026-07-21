@@ -1,7 +1,7 @@
----
-title: 碎碎念
-layout: page
----
+hexo.extend.generator.register('bber', function(locals) {
+  var data = locals.data.shuoshuo || [];
+  
+  var html = `
 <style>
 .bber-timeline {
   position: relative;
@@ -64,16 +64,28 @@ layout: page
   color: #c4c6c9;
 }
 </style>
-
 <div class="bber-timeline">
-  <% if (site.data.shuoshuo) { %>
-    <% site.data.shuoshuo.forEach(function(item) { %>
-      <div class="bber-item">
-        <div class="bber-date"><%= item.date %></div>
-        <div class="bber-content"><%- item.content %></div>
-      </div>
-    <% }) %>
-  <% } else { %>
-    <p>暂时还没有碎碎念哦~</p>
-  <% } %>
-</div>
+`;
+
+  if (data.length > 0) {
+    data.forEach(function(item) {
+      html += '<div class="bber-item">';
+      html += '<div class="bber-date">' + item.date + '</div>';
+      html += '<div class="bber-content">' + item.content + '</div>';
+      html += '</div>';
+    });
+  } else {
+    html += '<p>暂时还没有碎碎念哦~</p>';
+  }
+  
+  html += '</div>';
+
+  return {
+    path: 'bber/index.html',
+    data: {
+      title: '碎碎念',
+      content: html
+    },
+    layout: ['page', 'post']
+  };
+});
