@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 蓝罗的折腾笔记
+subtitle: '技术、摸鱼与生活的折腾记录'
+description: '分享RPA自动化开发、技术日常，以及一点极简生活和健身感悟'
 keywords:
-author: John Doe
-language: en
+author: 蓝罗
+language: zh-CN
 timezone: ''
 
 # URL
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
